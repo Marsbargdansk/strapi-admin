@@ -1,10 +1,10 @@
 {
-  "kind": "collectionType",
-  "collectionName": "events",
+  "kind": "singleType",
+  "collectionName": "happenings_pages",
   "info": {
-    "singularName": "event",
-    "pluralName": "events",
-    "displayName": "events"
+    "singularName": "happenings-page",
+    "pluralName": "happenings-pages",
+    "displayName": "happenings-page"
   },
   "options": {
     "draftAndPublish": true
@@ -15,7 +15,7 @@
     }
   },
   "attributes": {
-    "title": {
+    "eventsTitle": {
       "type": "string",
       "pluginOptions": {
         "i18n": {
@@ -24,36 +24,28 @@
       },
       "required": true
     },
-    "description": {
-      "type": "text",
+    "specialsTitle": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "required": true
+    },
+    "seoTitle": {
+      "type": "string",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       }
     },
-    "date": {
-      "type": "date",
+    "seoDescription": {
+      "type": "text",
       "pluginOptions": {
         "i18n": {
-          "localized": false
-        }
-      },
-      "required": true
-    },
-    "timeStart": {
-      "type": "time",
-      "pluginOptions": {
-        "i18n": {
-          "localized": false
-        }
-      }
-    },
-    "timeEnd": {
-      "type": "time",
-      "pluginOptions": {
-        "i18n": {
-          "localized": false
+          "localized": true
         }
       }
     }

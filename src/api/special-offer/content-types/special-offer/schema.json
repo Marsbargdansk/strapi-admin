@@ -1,10 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "events",
+  "collectionName": "special_offers",
   "info": {
-    "singularName": "event",
-    "pluralName": "events",
-    "displayName": "events"
+    "singularName": "special-offer",
+    "pluralName": "special-offers",
+    "displayName": "special-offer"
   },
   "options": {
     "draftAndPublish": true
@@ -15,6 +15,15 @@
     }
   },
   "attributes": {
+    "dayLabel": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "required": true
+    },
     "title": {
       "type": "string",
       "pluginOptions": {
@@ -25,35 +34,10 @@
       "required": true
     },
     "description": {
-      "type": "text",
+      "type": "string",
       "pluginOptions": {
         "i18n": {
           "localized": true
-        }
-      }
-    },
-    "date": {
-      "type": "date",
-      "pluginOptions": {
-        "i18n": {
-          "localized": false
-        }
-      },
-      "required": true
-    },
-    "timeStart": {
-      "type": "time",
-      "pluginOptions": {
-        "i18n": {
-          "localized": false
-        }
-      }
-    },
-    "timeEnd": {
-      "type": "time",
-      "pluginOptions": {
-        "i18n": {
-          "localized": false
         }
       }
     }

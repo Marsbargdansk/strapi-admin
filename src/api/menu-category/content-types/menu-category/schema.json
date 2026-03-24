@@ -1,10 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "events",
+  "collectionName": "menu_categories",
   "info": {
-    "singularName": "event",
-    "pluralName": "events",
-    "displayName": "events"
+    "singularName": "menu-category",
+    "pluralName": "menu-categories",
+    "displayName": "menu-category"
   },
   "options": {
     "draftAndPublish": true
@@ -24,38 +24,31 @@
       },
       "required": true
     },
-    "description": {
-      "type": "text",
+    "slug": {
+      "type": "uid",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
-      }
+      },
+      "targetField": "title",
+      "required": true
     },
-    "date": {
-      "type": "date",
+    "isActive": {
+      "type": "boolean",
       "pluginOptions": {
         "i18n": {
           "localized": false
         }
       },
-      "required": true
+      "required": true,
+      "default": true
     },
-    "timeStart": {
-      "type": "time",
-      "pluginOptions": {
-        "i18n": {
-          "localized": false
-        }
-      }
-    },
-    "timeEnd": {
-      "type": "time",
-      "pluginOptions": {
-        "i18n": {
-          "localized": false
-        }
-      }
+    "menu_items": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::menu-item.menu-item",
+      "mappedBy": "category"
     }
   }
 }
