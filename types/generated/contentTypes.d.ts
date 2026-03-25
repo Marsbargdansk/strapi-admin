@@ -665,7 +665,7 @@ export interface ApiHomeHome extends Struct.SingleTypeSchema {
     > &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
-          localized: true;
+          localized: false;
         };
       }>;
     atmosphereTitle: Schema.Attribute.String &
