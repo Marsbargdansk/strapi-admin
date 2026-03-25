@@ -24,14 +24,14 @@
       },
       "required": true
     },
-    "slug": {
+    "uid": {
       "type": "uid",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       },
-      "targetField": "title",
+      "targetField": "",
       "required": true
     },
     "isActive": {
