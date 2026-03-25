@@ -446,15 +446,7 @@ export interface ApiContactsPageContactsPage extends Struct.SingleTypeSchema {
     };
   };
   attributes: {
-    address: Schema.Attribute.String &
-      Schema.Attribute.Required &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: false;
-        };
-      }>;
-    addressTitle: Schema.Attribute.String &
-      Schema.Attribute.Required &
+    address: Schema.Attribute.Component<'shared.contact', false> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -476,25 +468,10 @@ export interface ApiContactsPageContactsPage extends Struct.SingleTypeSchema {
           localized: true;
         };
       }>;
-    email: Schema.Attribute.Email &
-      Schema.Attribute.Required &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: false;
-        };
-      }>;
-    emailTitle: Schema.Attribute.String &
-      Schema.Attribute.Required &
+    email: Schema.Attribute.Component<'shared.contact', false> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
-        };
-      }>;
-    instagramUrl: Schema.Attribute.String &
-      Schema.Attribute.Required &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: false;
         };
       }>;
     locale: Schema.Attribute.String;
@@ -516,22 +493,20 @@ export interface ApiContactsPageContactsPage extends Struct.SingleTypeSchema {
           localized: true;
         };
       }>;
-    phone: Schema.Attribute.String &
-      Schema.Attribute.Required &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: false;
-        };
-      }>;
-    phoneTitle: Schema.Attribute.String &
-      Schema.Attribute.Required &
+    phone: Schema.Attribute.Component<'shared.contact', false> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
         };
       }>;
     publishedAt: Schema.Attribute.DateTime;
-    socialTitle: Schema.Attribute.String &
+    socials: Schema.Attribute.Component<'shared.socials', true> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    socialsTitle: Schema.Attribute.String &
       Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{
         i18n: {

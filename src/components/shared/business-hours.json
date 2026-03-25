@@ -9,9 +9,13 @@
       "type": "string",
       "required": true
     },
-    "value": {
-      "type": "string",
-      "required": true
+    "startTime": {
+      "type": "time",
+      "default": "16:00:00.000"
+    },
+    "endTime": {
+      "type": "time",
+      "default": "00:00:00.000"
     }
   },
   "config": {}
