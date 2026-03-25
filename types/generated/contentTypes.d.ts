@@ -1026,7 +1026,7 @@ export interface ApiTableCategoryTableCategory
       Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
-          localized: true;
+          localized: false;
         };
       }>;
     updatedAt: Schema.Attribute.DateTime;
@@ -1055,7 +1055,7 @@ export interface ApiTableItemTableItem extends Struct.CollectionTypeSchema {
       Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
-          localized: true;
+          localized: false;
         };
       }>;
     category: Schema.Attribute.Relation<
@@ -1075,7 +1075,7 @@ export interface ApiTableItemTableItem extends Struct.CollectionTypeSchema {
       Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
-          localized: true;
+          localized: false;
         };
       }>;
     isActive: Schema.Attribute.Boolean &
@@ -1094,13 +1094,13 @@ export interface ApiTableItemTableItem extends Struct.CollectionTypeSchema {
     priceWeekdays: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
-          localized: true;
+          localized: false;
         };
       }>;
     priceWeekend: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
-          localized: true;
+          localized: false;
         };
       }>;
     publishedAt: Schema.Attribute.DateTime;
