@@ -684,8 +684,7 @@ export interface ApiHomeHome extends Struct.SingleTypeSchema {
         };
       }>;
     heroImage: Schema.Attribute.Media<
-      'images' | 'files' | 'videos' | 'audios',
-      true
+      'images' | 'files' | 'videos' | 'audios'
     > &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
