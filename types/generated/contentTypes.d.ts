@@ -756,14 +756,14 @@ export interface ApiMenuCategoryMenuCategory
       'api::menu-item.menu-item'
     >;
     publishedAt: Schema.Attribute.DateTime;
-    title: Schema.Attribute.String &
+    slug: Schema.Attribute.String &
       Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
-          localized: true;
+          localized: false;
         };
       }>;
-    uid: Schema.Attribute.UID<''> &
+    title: Schema.Attribute.String &
       Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -809,7 +809,7 @@ export interface ApiMenuItemMenuItem extends Struct.CollectionTypeSchema {
       Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
-          localized: true;
+          localized: false;
         };
       }>;
     isActive: Schema.Attribute.Boolean &
@@ -828,7 +828,7 @@ export interface ApiMenuItemMenuItem extends Struct.CollectionTypeSchema {
     price: Schema.Attribute.Integer &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
-          localized: true;
+          localized: false;
         };
       }>;
     publishedAt: Schema.Attribute.DateTime;
@@ -842,7 +842,7 @@ export interface ApiMenuItemMenuItem extends Struct.CollectionTypeSchema {
     unit: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
-          localized: true;
+          localized: false;
         };
       }> &
       Schema.Attribute.DefaultTo<'ml'>;
@@ -852,7 +852,7 @@ export interface ApiMenuItemMenuItem extends Struct.CollectionTypeSchema {
     volume: Schema.Attribute.Integer &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
-          localized: true;
+          localized: false;
         };
       }>;
   };
