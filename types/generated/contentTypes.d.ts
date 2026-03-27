@@ -901,38 +901,6 @@ export interface ApiMenuPageMenuPage extends Struct.SingleTypeSchema {
   };
 }
 
-export interface ApiProductProduct extends Struct.CollectionTypeSchema {
-  collectionName: 'products';
-  info: {
-    displayName: 'product';
-    pluralName: 'products';
-    singularName: 'product';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    createdAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    description: Schema.Attribute.Text;
-    locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::product.product'
-    > &
-      Schema.Attribute.Private;
-    photo: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
-    price: Schema.Attribute.Integer;
-    publishedAt: Schema.Attribute.DateTime;
-    title: Schema.Attribute.String & Schema.Attribute.Required;
-    updatedAt: Schema.Attribute.DateTime;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    value: Schema.Attribute.Integer;
-  };
-}
-
 export interface ApiSpecialOfferSpecialOffer
   extends Struct.CollectionTypeSchema {
   collectionName: 'special_offers';
@@ -953,7 +921,7 @@ export interface ApiSpecialOfferSpecialOffer
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    dayLabel: Schema.Attribute.String &
+    day: Schema.Attribute.String &
       Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -1685,7 +1653,6 @@ declare module '@strapi/strapi' {
       'api::menu-category.menu-category': ApiMenuCategoryMenuCategory;
       'api::menu-item.menu-item': ApiMenuItemMenuItem;
       'api::menu-page.menu-page': ApiMenuPageMenuPage;
-      'api::product.product': ApiProductProduct;
       'api::special-offer.special-offer': ApiSpecialOfferSpecialOffer;
       'api::table-category.table-category': ApiTableCategoryTableCategory;
       'api::table-item.table-item': ApiTableItemTableItem;

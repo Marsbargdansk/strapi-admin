@@ -15,7 +15,7 @@
     }
   },
   "attributes": {
-    "dayLabel": {
+    "day": {
       "type": "string",
       "pluginOptions": {
         "i18n": {
