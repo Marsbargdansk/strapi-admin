@@ -88,6 +88,15 @@
       "relation": "manyToOne",
       "target": "api::menu-category.menu-category",
       "inversedBy": "menu_items"
+    },
+    "sortOrder": {
+      "type": "integer",
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "default": 1
     }
   }
 }
