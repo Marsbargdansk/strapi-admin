@@ -742,7 +742,7 @@ export interface ApiMenuCategoryMenuCategory
       Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
-          localized: true;
+          localized: false;
         };
       }> &
       Schema.Attribute.DefaultTo<true>;
@@ -760,7 +760,7 @@ export interface ApiMenuCategoryMenuCategory
       Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
-          localized: true;
+          localized: false;
         };
       }>;
     title: Schema.Attribute.String &
