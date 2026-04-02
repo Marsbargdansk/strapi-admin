@@ -15,7 +15,7 @@
     }
   },
   "attributes": {
-    "dayTitle": {
+    "day": {
       "type": "string",
       "pluginOptions": {
         "i18n": {
@@ -41,7 +41,7 @@
         }
       }
     },
-    "day": {
+    "slug": {
       "type": "string",
       "pluginOptions": {
         "i18n": {

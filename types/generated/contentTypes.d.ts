@@ -939,13 +939,6 @@ export interface ApiSpecialOfferSpecialOffer
       Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
-          localized: false;
-        };
-      }>;
-    dayTitle: Schema.Attribute.String &
-      Schema.Attribute.Required &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
           localized: true;
         };
       }>;
@@ -961,6 +954,13 @@ export interface ApiSpecialOfferSpecialOffer
       'api::special-offer.special-offer'
     >;
     publishedAt: Schema.Attribute.DateTime;
+    slug: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: false;
+        };
+      }>;
     title: Schema.Attribute.String &
       Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{
