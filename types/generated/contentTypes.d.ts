@@ -939,6 +939,13 @@ export interface ApiSpecialOfferSpecialOffer
       Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
+          localized: false;
+        };
+      }>;
+    dayTitle: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
           localized: true;
         };
       }>;

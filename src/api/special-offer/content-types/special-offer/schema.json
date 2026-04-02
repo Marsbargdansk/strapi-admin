@@ -15,7 +15,7 @@
     }
   },
   "attributes": {
-    "day": {
+    "dayTitle": {
       "type": "string",
       "pluginOptions": {
         "i18n": {
@@ -40,6 +40,15 @@
           "localized": true
         }
       }
+    },
+    "day": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "required": true
     }
   }
 }
