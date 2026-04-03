@@ -56,6 +56,15 @@
           "localized": false
         }
       }
+    },
+    "sortOrder": {
+      "type": "integer",
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "default": 1
     }
   }
 }

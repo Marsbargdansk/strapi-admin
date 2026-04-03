@@ -88,6 +88,15 @@
       },
       "required": true,
       "default": true
+    },
+    "sortOrder": {
+      "type": "integer",
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "default": 1
     }
   }
 }

@@ -39,6 +39,15 @@
       "relation": "oneToMany",
       "target": "api::table-item.table-item",
       "mappedBy": "category"
+    },
+    "sortOrder": {
+      "type": "integer",
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "default": 1
     }
   }
 }
